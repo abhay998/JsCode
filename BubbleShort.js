@@ -1,12 +1,17 @@
 function BubbleShort() {
     let arr = [14, 6, 3, 25, 73, 2, 6, 88, 22];
     for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-             if(arr[i]> arr[j]){
-                let swap = arr[i];
-                arr[i] = arr[j];
-                arr[j] = swap;
+        let swapped = false;
+        for (let j = 0; j < arr.length - i -1; j++) {
+             if(arr[j]> arr[j+1]){
+                let swap = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = swap;
+                swapped = true
              }
+        }
+        if(swapped == false){
+            break;
         }
     }
     console.log("arr arr", arr)
