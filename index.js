@@ -13,7 +13,7 @@
 
 var a = 10;
 {
-    var a = 20;
+    var b = 20;
     console.log("inside a", a)
 
     {

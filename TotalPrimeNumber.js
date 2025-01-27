@@ -15,4 +15,8 @@ function totalPrimeNumber(number){
     console.log(primeArr)
     
 }
-totalPrimeNumber(10);
+totalPrimeNumber(100);
+
+
+
+

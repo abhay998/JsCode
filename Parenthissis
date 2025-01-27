@@ -1,0 +1,18 @@
+function removeParenthsis() {
+    let input = "(syn)optio)n(co(mpa(ny)))";
+    let arr = input.split("");
+    let newArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] == ")" && newArr.length == 0) {
+            arr.splice(i, 1)
+        }
+        else if (arr[i] == '(') {
+            newArr.push("(")
+        }
+        else if (arr[i] == ')' && newArr.length) {
+            let pop = newArr.pop();
+        }
+    }
+    return arr;
+}
+console.log(removeParenthsis()?.toString().replace(/,/g, ''));
